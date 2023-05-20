@@ -1,0 +1,14 @@
+{
+  "name": "cat-bot",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/node": "^20.2.1"
+  },
+  "scripts": {
+    "main": "index.ts"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.3.7",
+    "node-fetch": "^3.3.1"
+  }
+}
