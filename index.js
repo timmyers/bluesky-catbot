@@ -1,9 +1,9 @@
-const { BskyAgent } = require('@atproto/api')
-const fs = require('node:fs/promises')
+const { BskyAgent } = require('@atproto/api');
+const fs = require('node:fs/promises');
 
 (async () => {
   console.log('Catbot starting...')
-  const prompt = process.env.PROMPT
+  const prompt = await fs.readFile("prompt.txt", "utf8")
 
   const agent = new BskyAgent({ service: 'https://bsky.social' })
 
@@ -25,7 +25,7 @@ const fs = require('node:fs/promises')
   console.log('Uploaded image, posting...')
 
   await agent.post({
-    text: "",
+    text: prompt,
     embed: {
       images: [{
         image: blob.data.blob,

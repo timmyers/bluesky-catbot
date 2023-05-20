@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-set -e
+# set -e
 
-export PROMPT="a cute kitty cat in some unique situation, 4k, dlsr"
-
-python main.py
-node index.js
+while true; do
+  python main.py
+  node index.js
+  sleep 600 # pause for 1 hour (3600 seconds)
+done
